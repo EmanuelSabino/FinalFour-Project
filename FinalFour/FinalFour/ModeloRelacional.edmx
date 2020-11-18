@@ -1,0 +1,954 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DataBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ClubesFutebol">
+          <Key>
+            <PropertyRef Name="Id_Clube" />
+          </Key>
+          <Property Name="Id_Clube" Type="int" Nullable="false" />
+          <Property Name="NomeClube" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataFundacao" Type="date" Nullable="false" />
+          <Property Name="NomeEstadio" Type="varchar" MaxLength="30" Nullable="false" />
+          <Property Name="NumDivisao" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Dirigentes">
+          <Key>
+            <PropertyRef Name="Nif" />
+          </Key>
+          <Property Name="Nif" Type="nchar" MaxLength="9" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataNascimento" Type="date" Nullable="false" />
+          <Property Name="Contacto" Type="nchar" MaxLength="9" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Salario" Type="money" Nullable="false" />
+          <Property Name="InicioContrato" Type="date" Nullable="false" />
+          <Property Name="FimContrato" Type="date" Nullable="false" />
+          <Property Name="Ncarteira" Type="int" Nullable="false" />
+          <Property Name="id_tipoDir" Type="int" Nullable="false" />
+          <Property Name="id_Clube" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jogadores">
+          <Key>
+            <PropertyRef Name="Nif" />
+          </Key>
+          <Property Name="Nif" Type="nchar" MaxLength="9" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataNascimento" Type="date" Nullable="false" />
+          <Property Name="Peso" Type="real" Nullable="false" />
+          <Property Name="Contacto" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Salario" Type="money" Nullable="false" />
+          <Property Name="InicioContrato" Type="date" Nullable="false" />
+          <Property Name="FimContrato" Type="date" Nullable="false" />
+          <Property Name="NomeCamisola" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="NumeroCamisola" Type="int" Nullable="false" />
+          <Property Name="id_Posicao" Type="int" Nullable="false" />
+          <Property Name="id_Nacionalidade" Type="int" Nullable="false" />
+          <Property Name="id_Clube" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Jogos">
+          <Key>
+            <PropertyRef Name="Id_Jogo" />
+          </Key>
+          <Property Name="Id_Jogo" Type="int" Nullable="false" />
+          <Property Name="Id_ClubeDaCasa" Type="int" Nullable="false" />
+          <Property Name="Id_ClubeVisitente" Type="int" Nullable="false" />
+          <Property Name="InicioJogo" Type="date" Nullable="false" />
+          <Property Name="ResultadoClubeDaCasa" Type="int" Nullable="false" />
+          <Property Name="ResultadoClubeVisitente" Type="int" Nullable="false" />
+          <Property Name="EstadioDoJogo" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Nacionalidades">
+          <Key>
+            <PropertyRef Name="Id_Nac" />
+          </Key>
+          <Property Name="Id_Nac" Type="int" Nullable="false" />
+          <Property Name="NomeNacionalidade" Type="varchar" MaxLength="15" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Paises">
+          <Key>
+            <PropertyRef Name="Id_Pais" />
+          </Key>
+          <Property Name="Id_Pais" Type="int" Nullable="false" />
+          <Property Name="NomePaises" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PosicaoJog">
+          <Key>
+            <PropertyRef Name="Id_Pos" />
+          </Key>
+          <Property Name="Id_Pos" Type="int" Nullable="false" />
+          <Property Name="TipoPosicao" Type="varchar" MaxLength="13" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Tecnicos">
+          <Key>
+            <PropertyRef Name="Nif" />
+          </Key>
+          <Property Name="Nif" Type="nchar" MaxLength="9" Nullable="false" />
+          <Property Name="Nome" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataNascimento" Type="date" Nullable="false" />
+          <Property Name="Contacto" Type="nchar" MaxLength="9" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Salario" Type="money" Nullable="false" />
+          <Property Name="InicioContrato" Type="date" Nullable="false" />
+          <Property Name="FimContrato" Type="date" Nullable="false" />
+          <Property Name="Ncarteira" Type="int" Nullable="false" />
+          <Property Name="id_tipoTec" Type="int" Nullable="false" />
+          <Property Name="NumGrauTec" Type="int" Nullable="false" />
+          <Property Name="id_Clube" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TiposDirigentes">
+          <Key>
+            <PropertyRef Name="Id_Dir" />
+          </Key>
+          <Property Name="Id_Dir" Type="int" Nullable="false" />
+          <Property Name="TipoDir" Type="varchar" MaxLength="17" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TiposTecnicos">
+          <Key>
+            <PropertyRef Name="Id_Tec" />
+          </Key>
+          <Property Name="Id_Tec" Type="int" Nullable="false" />
+          <Property Name="TipoTecnico" Type="varchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Torneios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="Id_PrimeiroJogo" Type="int" Nullable="false" />
+          <Property Name="Id_SegundoJogo" Type="int" Nullable="false" />
+          <Property Name="Id_UltimoJogo" Type="int" Nullable="false" />
+          <Property Name="InicioTorneio" Type="date" Nullable="false" />
+          <Property Name="Id_ClubeVencedor" Type="int" Nullable="false" />
+          <Property Name="id_Pais" Type="int" Nullable="false" />
+          <Property Name="Pemio" Type="float" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_ClubeDaCasa">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Jogos">
+              <PropertyRef Name="Id_ClubeDaCasa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeDirigente">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Dirigentes" Type="Self.Dirigentes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Dirigentes">
+              <PropertyRef Name="id_Clube" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeJog">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Jogadores" Type="Self.Jogadores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Jogadores">
+              <PropertyRef Name="id_Clube" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeTec">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Tecnicos" Type="Self.Tecnicos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Tecnicos">
+              <PropertyRef Name="id_Clube" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeVencedor">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="Id_ClubeVencedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeVisitante">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Jogos">
+              <PropertyRef Name="Id_ClubeVisitente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JogadorNacionalidade">
+          <End Role="Nacionalidades" Type="Self.Nacionalidades" Multiplicity="1" />
+          <End Role="Jogadores" Type="Self.Jogadores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nacionalidades">
+              <PropertyRef Name="Id_Nac" />
+            </Principal>
+            <Dependent Role="Jogadores">
+              <PropertyRef Name="id_Nacionalidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JogadorPosicao">
+          <End Role="PosicaoJog" Type="Self.PosicaoJog" Multiplicity="1" />
+          <End Role="Jogadores" Type="Self.Jogadores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PosicaoJog">
+              <PropertyRef Name="Id_Pos" />
+            </Principal>
+            <Dependent Role="Jogadores">
+              <PropertyRef Name="id_Posicao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_paisTorneio">
+          <End Role="Paises" Type="Self.Paises" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paises">
+              <PropertyRef Name="Id_Pais" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="id_Pais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_primeiroJogo">
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jogos">
+              <PropertyRef Name="Id_Jogo" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="Id_PrimeiroJogo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_segundoJogo">
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jogos">
+              <PropertyRef Name="Id_Jogo" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="Id_SegundoJogo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoDirigente">
+          <End Role="TiposDirigentes" Type="Self.TiposDirigentes" Multiplicity="1" />
+          <End Role="Dirigentes" Type="Self.Dirigentes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposDirigentes">
+              <PropertyRef Name="Id_Dir" />
+            </Principal>
+            <Dependent Role="Dirigentes">
+              <PropertyRef Name="id_tipoDir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoTecnico">
+          <End Role="TiposTecnicos" Type="Self.TiposTecnicos" Multiplicity="1" />
+          <End Role="Tecnicos" Type="Self.Tecnicos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposTecnicos">
+              <PropertyRef Name="Id_Tec" />
+            </Principal>
+            <Dependent Role="Tecnicos">
+              <PropertyRef Name="id_tipoTec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UltimoJogo">
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jogos">
+              <PropertyRef Name="Id_Jogo" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="Id_UltimoJogo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DataBaseModelStoreContainer">
+          <EntitySet Name="ClubesFutebol" EntityType="Self.ClubesFutebol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Dirigentes" EntityType="Self.Dirigentes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jogadores" EntityType="Self.Jogadores" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Jogos" EntityType="Self.Jogos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Nacionalidades" EntityType="Self.Nacionalidades" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Paises" EntityType="Self.Paises" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PosicaoJog" EntityType="Self.PosicaoJog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Tecnicos" EntityType="Self.Tecnicos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TiposDirigentes" EntityType="Self.TiposDirigentes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TiposTecnicos" EntityType="Self.TiposTecnicos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Torneios" EntityType="Self.Torneios" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_ClubeDaCasa" Association="Self.FK_ClubeDaCasa">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Jogos" EntitySet="Jogos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeDirigente" Association="Self.FK_ClubeDirigente">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Dirigentes" EntitySet="Dirigentes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeJog" Association="Self.FK_ClubeJog">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Jogadores" EntitySet="Jogadores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeTec" Association="Self.FK_ClubeTec">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Tecnicos" EntitySet="Tecnicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeVencedor" Association="Self.FK_ClubeVencedor">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeVisitante" Association="Self.FK_ClubeVisitante">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Jogos" EntitySet="Jogos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JogadorNacionalidade" Association="Self.FK_JogadorNacionalidade">
+            <End Role="Nacionalidades" EntitySet="Nacionalidades" />
+            <End Role="Jogadores" EntitySet="Jogadores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JogadorPosicao" Association="Self.FK_JogadorPosicao">
+            <End Role="PosicaoJog" EntitySet="PosicaoJog" />
+            <End Role="Jogadores" EntitySet="Jogadores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_paisTorneio" Association="Self.FK_paisTorneio">
+            <End Role="Paises" EntitySet="Paises" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_primeiroJogo" Association="Self.FK_primeiroJogo">
+            <End Role="Jogos" EntitySet="Jogos" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_segundoJogo" Association="Self.FK_segundoJogo">
+            <End Role="Jogos" EntitySet="Jogos" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoDirigente" Association="Self.FK_TipoDirigente">
+            <End Role="TiposDirigentes" EntitySet="TiposDirigentes" />
+            <End Role="Dirigentes" EntitySet="Dirigentes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoTecnico" Association="Self.FK_TipoTecnico">
+            <End Role="TiposTecnicos" EntitySet="TiposTecnicos" />
+            <End Role="Tecnicos" EntitySet="Tecnicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UltimoJogo" Association="Self.FK_UltimoJogo">
+            <End Role="Jogos" EntitySet="Jogos" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ClubesFutebol">
+          <Key>
+            <PropertyRef Name="Id_Clube" />
+          </Key>
+          <Property Name="Id_Clube" Type="Int32" Nullable="false" />
+          <Property Name="NomeClube" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DataFundacao" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="NomeEstadio" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumDivisao" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Jogos" Relationship="Self.FK_ClubeDaCasa" FromRole="ClubesFutebol" ToRole="Jogos" />
+          <NavigationProperty Name="Dirigentes" Relationship="Self.FK_ClubeDirigente" FromRole="ClubesFutebol" ToRole="Dirigentes" />
+          <NavigationProperty Name="Jogadores" Relationship="Self.FK_ClubeJog" FromRole="ClubesFutebol" ToRole="Jogadores" />
+          <NavigationProperty Name="Tecnicos" Relationship="Self.FK_ClubeTec" FromRole="ClubesFutebol" ToRole="Tecnicos" />
+          <NavigationProperty Name="Torneios" Relationship="Self.FK_ClubeVencedor" FromRole="ClubesFutebol" ToRole="Torneios" />
+          <NavigationProperty Name="Jogos1" Relationship="Self.FK_ClubeVisitante" FromRole="ClubesFutebol" ToRole="Jogos" />
+        </EntityType>
+        <EntityType Name="Dirigentes">
+          <Key>
+            <PropertyRef Name="Nif" />
+          </Key>
+          <Property Name="Nif" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DataNascimento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Contacto" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Salario" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="InicioContrato" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FimContrato" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Ncarteira" Type="Int32" Nullable="false" />
+          <Property Name="id_tipoDir" Type="Int32" Nullable="false" />
+          <Property Name="id_Clube" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ClubesFutebol" Relationship="Self.FK_ClubeDirigente" FromRole="Dirigentes" ToRole="ClubesFutebol" />
+          <NavigationProperty Name="TiposDirigentes" Relationship="Self.FK_TipoDirigente" FromRole="Dirigentes" ToRole="TiposDirigentes" />
+        </EntityType>
+        <EntityType Name="Jogadores">
+          <Key>
+            <PropertyRef Name="Nif" />
+          </Key>
+          <Property Name="Nif" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DataNascimento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Peso" Type="Single" Nullable="false" />
+          <Property Name="Contacto" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Salario" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="InicioContrato" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FimContrato" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="NomeCamisola" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumeroCamisola" Type="Int32" Nullable="false" />
+          <Property Name="id_Posicao" Type="Int32" Nullable="false" />
+          <Property Name="id_Nacionalidade" Type="Int32" Nullable="false" />
+          <Property Name="id_Clube" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ClubesFutebol" Relationship="Self.FK_ClubeJog" FromRole="Jogadores" ToRole="ClubesFutebol" />
+          <NavigationProperty Name="Nacionalidades" Relationship="Self.FK_JogadorNacionalidade" FromRole="Jogadores" ToRole="Nacionalidades" />
+          <NavigationProperty Name="PosicaoJog" Relationship="Self.FK_JogadorPosicao" FromRole="Jogadores" ToRole="PosicaoJog" />
+        </EntityType>
+        <EntityType Name="Jogos">
+          <Key>
+            <PropertyRef Name="Id_Jogo" />
+          </Key>
+          <Property Name="Id_Jogo" Type="Int32" Nullable="false" />
+          <Property Name="Id_ClubeDaCasa" Type="Int32" Nullable="false" />
+          <Property Name="Id_ClubeVisitente" Type="Int32" Nullable="false" />
+          <Property Name="InicioJogo" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="ResultadoClubeDaCasa" Type="Int32" Nullable="false" />
+          <Property Name="ResultadoClubeVisitente" Type="Int32" Nullable="false" />
+          <Property Name="EstadioDoJogo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="ClubesFutebol" Relationship="Self.FK_ClubeDaCasa" FromRole="Jogos" ToRole="ClubesFutebol" />
+          <NavigationProperty Name="ClubesFutebol1" Relationship="Self.FK_ClubeVisitante" FromRole="Jogos" ToRole="ClubesFutebol" />
+          <NavigationProperty Name="Torneios" Relationship="Self.FK_primeiroJogo" FromRole="Jogos" ToRole="Torneios" />
+          <NavigationProperty Name="Torneios1" Relationship="Self.FK_segundoJogo" FromRole="Jogos" ToRole="Torneios" />
+          <NavigationProperty Name="Torneios2" Relationship="Self.FK_UltimoJogo" FromRole="Jogos" ToRole="Torneios" />
+        </EntityType>
+        <EntityType Name="Nacionalidades">
+          <Key>
+            <PropertyRef Name="Id_Nac" />
+          </Key>
+          <Property Name="Id_Nac" Type="Int32" Nullable="false" />
+          <Property Name="NomeNacionalidade" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Jogadores" Relationship="Self.FK_JogadorNacionalidade" FromRole="Nacionalidades" ToRole="Jogadores" />
+        </EntityType>
+        <EntityType Name="Paises">
+          <Key>
+            <PropertyRef Name="Id_Pais" />
+          </Key>
+          <Property Name="Id_Pais" Type="Int32" Nullable="false" />
+          <Property Name="NomePaises" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Torneios" Relationship="Self.FK_paisTorneio" FromRole="Paises" ToRole="Torneios" />
+        </EntityType>
+        <EntityType Name="PosicaoJog">
+          <Key>
+            <PropertyRef Name="Id_Pos" />
+          </Key>
+          <Property Name="Id_Pos" Type="Int32" Nullable="false" />
+          <Property Name="TipoPosicao" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Jogadores" Relationship="Self.FK_JogadorPosicao" FromRole="PosicaoJog" ToRole="Jogadores" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Tecnicos">
+          <Key>
+            <PropertyRef Name="Nif" />
+          </Key>
+          <Property Name="Nif" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Nome" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="DataNascimento" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Contacto" Type="String" MaxLength="9" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Salario" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
+          <Property Name="InicioContrato" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="FimContrato" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Ncarteira" Type="Int32" Nullable="false" />
+          <Property Name="id_tipoTec" Type="Int32" Nullable="false" />
+          <Property Name="NumGrauTec" Type="Int32" Nullable="false" />
+          <Property Name="id_Clube" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ClubesFutebol" Relationship="Self.FK_ClubeTec" FromRole="Tecnicos" ToRole="ClubesFutebol" />
+          <NavigationProperty Name="TiposTecnicos" Relationship="Self.FK_TipoTecnico" FromRole="Tecnicos" ToRole="TiposTecnicos" />
+        </EntityType>
+        <EntityType Name="TiposDirigentes">
+          <Key>
+            <PropertyRef Name="Id_Dir" />
+          </Key>
+          <Property Name="Id_Dir" Type="Int32" Nullable="false" />
+          <Property Name="TipoDir" Type="String" MaxLength="17" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Dirigentes" Relationship="Self.FK_TipoDirigente" FromRole="TiposDirigentes" ToRole="Dirigentes" />
+        </EntityType>
+        <EntityType Name="TiposTecnicos">
+          <Key>
+            <PropertyRef Name="Id_Tec" />
+          </Key>
+          <Property Name="Id_Tec" Type="Int32" Nullable="false" />
+          <Property Name="TipoTecnico" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="Tecnicos" Relationship="Self.FK_TipoTecnico" FromRole="TiposTecnicos" ToRole="Tecnicos" />
+        </EntityType>
+        <EntityType Name="Torneios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" />
+          <Property Name="Id_PrimeiroJogo" Type="Int32" Nullable="false" />
+          <Property Name="Id_SegundoJogo" Type="Int32" Nullable="false" />
+          <Property Name="Id_UltimoJogo" Type="Int32" Nullable="false" />
+          <Property Name="InicioTorneio" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="Id_ClubeVencedor" Type="Int32" Nullable="false" />
+          <Property Name="id_Pais" Type="Int32" Nullable="false" />
+          <Property Name="Pemio" Type="Double" Nullable="false" />
+          <NavigationProperty Name="ClubesFutebol" Relationship="Self.FK_ClubeVencedor" FromRole="Torneios" ToRole="ClubesFutebol" />
+          <NavigationProperty Name="Jogos" Relationship="Self.FK_primeiroJogo" FromRole="Torneios" ToRole="Jogos" />
+          <NavigationProperty Name="Jogos1" Relationship="Self.FK_segundoJogo" FromRole="Torneios" ToRole="Jogos" />
+          <NavigationProperty Name="Jogos2" Relationship="Self.FK_UltimoJogo" FromRole="Torneios" ToRole="Jogos" />
+          <NavigationProperty Name="Paises" Relationship="Self.FK_paisTorneio" FromRole="Torneios" ToRole="Paises" />
+        </EntityType>
+        <Association Name="FK_ClubeDaCasa">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Jogos">
+              <PropertyRef Name="Id_ClubeDaCasa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeDirigente">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Dirigentes" Type="Self.Dirigentes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Dirigentes">
+              <PropertyRef Name="id_Clube" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeJog">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Jogadores" Type="Self.Jogadores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Jogadores">
+              <PropertyRef Name="id_Clube" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeTec">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Tecnicos" Type="Self.Tecnicos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Tecnicos">
+              <PropertyRef Name="id_Clube" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeVencedor">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="Id_ClubeVencedor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_ClubeVisitante">
+          <End Role="ClubesFutebol" Type="Self.ClubesFutebol" Multiplicity="1" />
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ClubesFutebol">
+              <PropertyRef Name="Id_Clube" />
+            </Principal>
+            <Dependent Role="Jogos">
+              <PropertyRef Name="Id_ClubeVisitente" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoDirigente">
+          <End Role="TiposDirigentes" Type="Self.TiposDirigentes" Multiplicity="1" />
+          <End Role="Dirigentes" Type="Self.Dirigentes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposDirigentes">
+              <PropertyRef Name="Id_Dir" />
+            </Principal>
+            <Dependent Role="Dirigentes">
+              <PropertyRef Name="id_tipoDir" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JogadorNacionalidade">
+          <End Role="Nacionalidades" Type="Self.Nacionalidades" Multiplicity="1" />
+          <End Role="Jogadores" Type="Self.Jogadores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Nacionalidades">
+              <PropertyRef Name="Id_Nac" />
+            </Principal>
+            <Dependent Role="Jogadores">
+              <PropertyRef Name="id_Nacionalidade" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_JogadorPosicao">
+          <End Role="PosicaoJog" Type="Self.PosicaoJog" Multiplicity="1" />
+          <End Role="Jogadores" Type="Self.Jogadores" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PosicaoJog">
+              <PropertyRef Name="Id_Pos" />
+            </Principal>
+            <Dependent Role="Jogadores">
+              <PropertyRef Name="id_Posicao" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_primeiroJogo">
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jogos">
+              <PropertyRef Name="Id_Jogo" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="Id_PrimeiroJogo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_segundoJogo">
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jogos">
+              <PropertyRef Name="Id_Jogo" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="Id_SegundoJogo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UltimoJogo">
+          <End Role="Jogos" Type="Self.Jogos" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Jogos">
+              <PropertyRef Name="Id_Jogo" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="Id_UltimoJogo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_paisTorneio">
+          <End Role="Paises" Type="Self.Paises" Multiplicity="1" />
+          <End Role="Torneios" Type="Self.Torneios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Paises">
+              <PropertyRef Name="Id_Pais" />
+            </Principal>
+            <Dependent Role="Torneios">
+              <PropertyRef Name="id_Pais" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_TipoTecnico">
+          <End Role="TiposTecnicos" Type="Self.TiposTecnicos" Multiplicity="1" />
+          <End Role="Tecnicos" Type="Self.Tecnicos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TiposTecnicos">
+              <PropertyRef Name="Id_Tec" />
+            </Principal>
+            <Dependent Role="Tecnicos">
+              <PropertyRef Name="id_tipoTec" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="DataBaseEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ClubesFutebol" EntityType="Self.ClubesFutebol" />
+          <EntitySet Name="Dirigentes" EntityType="Self.Dirigentes" />
+          <EntitySet Name="Jogadores" EntityType="Self.Jogadores" />
+          <EntitySet Name="Jogos" EntityType="Self.Jogos" />
+          <EntitySet Name="Nacionalidades" EntityType="Self.Nacionalidades" />
+          <EntitySet Name="Paises" EntityType="Self.Paises" />
+          <EntitySet Name="PosicaoJog" EntityType="Self.PosicaoJog" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+          <EntitySet Name="Tecnicos" EntityType="Self.Tecnicos" />
+          <EntitySet Name="TiposDirigentes" EntityType="Self.TiposDirigentes" />
+          <EntitySet Name="TiposTecnicos" EntityType="Self.TiposTecnicos" />
+          <EntitySet Name="Torneios" EntityType="Self.Torneios" />
+          <AssociationSet Name="FK_ClubeDaCasa" Association="Self.FK_ClubeDaCasa">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Jogos" EntitySet="Jogos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeDirigente" Association="Self.FK_ClubeDirigente">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Dirigentes" EntitySet="Dirigentes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeJog" Association="Self.FK_ClubeJog">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Jogadores" EntitySet="Jogadores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeTec" Association="Self.FK_ClubeTec">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Tecnicos" EntitySet="Tecnicos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeVencedor" Association="Self.FK_ClubeVencedor">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_ClubeVisitante" Association="Self.FK_ClubeVisitante">
+            <End Role="ClubesFutebol" EntitySet="ClubesFutebol" />
+            <End Role="Jogos" EntitySet="Jogos" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoDirigente" Association="Self.FK_TipoDirigente">
+            <End Role="TiposDirigentes" EntitySet="TiposDirigentes" />
+            <End Role="Dirigentes" EntitySet="Dirigentes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JogadorNacionalidade" Association="Self.FK_JogadorNacionalidade">
+            <End Role="Nacionalidades" EntitySet="Nacionalidades" />
+            <End Role="Jogadores" EntitySet="Jogadores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_JogadorPosicao" Association="Self.FK_JogadorPosicao">
+            <End Role="PosicaoJog" EntitySet="PosicaoJog" />
+            <End Role="Jogadores" EntitySet="Jogadores" />
+          </AssociationSet>
+          <AssociationSet Name="FK_primeiroJogo" Association="Self.FK_primeiroJogo">
+            <End Role="Jogos" EntitySet="Jogos" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_segundoJogo" Association="Self.FK_segundoJogo">
+            <End Role="Jogos" EntitySet="Jogos" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UltimoJogo" Association="Self.FK_UltimoJogo">
+            <End Role="Jogos" EntitySet="Jogos" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_paisTorneio" Association="Self.FK_paisTorneio">
+            <End Role="Paises" EntitySet="Paises" />
+            <End Role="Torneios" EntitySet="Torneios" />
+          </AssociationSet>
+          <AssociationSet Name="FK_TipoTecnico" Association="Self.FK_TipoTecnico">
+            <End Role="TiposTecnicos" EntitySet="TiposTecnicos" />
+            <End Role="Tecnicos" EntitySet="Tecnicos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DataBaseModelStoreContainer" CdmEntityContainer="DataBaseEntities">
+          <EntitySetMapping Name="ClubesFutebol">
+            <EntityTypeMapping TypeName="DataBaseModel.ClubesFutebol">
+              <MappingFragment StoreEntitySet="ClubesFutebol">
+                <ScalarProperty Name="Id_Clube" ColumnName="Id_Clube" />
+                <ScalarProperty Name="NomeClube" ColumnName="NomeClube" />
+                <ScalarProperty Name="DataFundacao" ColumnName="DataFundacao" />
+                <ScalarProperty Name="NomeEstadio" ColumnName="NomeEstadio" />
+                <ScalarProperty Name="NumDivisao" ColumnName="NumDivisao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Dirigentes">
+            <EntityTypeMapping TypeName="DataBaseModel.Dirigentes">
+              <MappingFragment StoreEntitySet="Dirigentes">
+                <ScalarProperty Name="Nif" ColumnName="Nif" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Salario" ColumnName="Salario" />
+                <ScalarProperty Name="InicioContrato" ColumnName="InicioContrato" />
+                <ScalarProperty Name="FimContrato" ColumnName="FimContrato" />
+                <ScalarProperty Name="Ncarteira" ColumnName="Ncarteira" />
+                <ScalarProperty Name="id_tipoDir" ColumnName="id_tipoDir" />
+                <ScalarProperty Name="id_Clube" ColumnName="id_Clube" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jogadores">
+            <EntityTypeMapping TypeName="DataBaseModel.Jogadores">
+              <MappingFragment StoreEntitySet="Jogadores">
+                <ScalarProperty Name="Nif" ColumnName="Nif" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+                <ScalarProperty Name="Peso" ColumnName="Peso" />
+                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Salario" ColumnName="Salario" />
+                <ScalarProperty Name="InicioContrato" ColumnName="InicioContrato" />
+                <ScalarProperty Name="FimContrato" ColumnName="FimContrato" />
+                <ScalarProperty Name="NomeCamisola" ColumnName="NomeCamisola" />
+                <ScalarProperty Name="NumeroCamisola" ColumnName="NumeroCamisola" />
+                <ScalarProperty Name="id_Posicao" ColumnName="id_Posicao" />
+                <ScalarProperty Name="id_Nacionalidade" ColumnName="id_Nacionalidade" />
+                <ScalarProperty Name="id_Clube" ColumnName="id_Clube" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Jogos">
+            <EntityTypeMapping TypeName="DataBaseModel.Jogos">
+              <MappingFragment StoreEntitySet="Jogos">
+                <ScalarProperty Name="Id_Jogo" ColumnName="Id_Jogo" />
+                <ScalarProperty Name="Id_ClubeDaCasa" ColumnName="Id_ClubeDaCasa" />
+                <ScalarProperty Name="Id_ClubeVisitente" ColumnName="Id_ClubeVisitente" />
+                <ScalarProperty Name="InicioJogo" ColumnName="InicioJogo" />
+                <ScalarProperty Name="ResultadoClubeDaCasa" ColumnName="ResultadoClubeDaCasa" />
+                <ScalarProperty Name="ResultadoClubeVisitente" ColumnName="ResultadoClubeVisitente" />
+                <ScalarProperty Name="EstadioDoJogo" ColumnName="EstadioDoJogo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Nacionalidades">
+            <EntityTypeMapping TypeName="DataBaseModel.Nacionalidades">
+              <MappingFragment StoreEntitySet="Nacionalidades">
+                <ScalarProperty Name="Id_Nac" ColumnName="Id_Nac" />
+                <ScalarProperty Name="NomeNacionalidade" ColumnName="NomeNacionalidade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Paises">
+            <EntityTypeMapping TypeName="DataBaseModel.Paises">
+              <MappingFragment StoreEntitySet="Paises">
+                <ScalarProperty Name="Id_Pais" ColumnName="Id_Pais" />
+                <ScalarProperty Name="NomePaises" ColumnName="NomePaises" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PosicaoJog">
+            <EntityTypeMapping TypeName="DataBaseModel.PosicaoJog">
+              <MappingFragment StoreEntitySet="PosicaoJog">
+                <ScalarProperty Name="Id_Pos" ColumnName="Id_Pos" />
+                <ScalarProperty Name="TipoPosicao" ColumnName="TipoPosicao" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="DataBaseModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Tecnicos">
+            <EntityTypeMapping TypeName="DataBaseModel.Tecnicos">
+              <MappingFragment StoreEntitySet="Tecnicos">
+                <ScalarProperty Name="Nif" ColumnName="Nif" />
+                <ScalarProperty Name="Nome" ColumnName="Nome" />
+                <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+                <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Salario" ColumnName="Salario" />
+                <ScalarProperty Name="InicioContrato" ColumnName="InicioContrato" />
+                <ScalarProperty Name="FimContrato" ColumnName="FimContrato" />
+                <ScalarProperty Name="Ncarteira" ColumnName="Ncarteira" />
+                <ScalarProperty Name="id_tipoTec" ColumnName="id_tipoTec" />
+                <ScalarProperty Name="NumGrauTec" ColumnName="NumGrauTec" />
+                <ScalarProperty Name="id_Clube" ColumnName="id_Clube" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TiposDirigentes">
+            <EntityTypeMapping TypeName="DataBaseModel.TiposDirigentes">
+              <MappingFragment StoreEntitySet="TiposDirigentes">
+                <ScalarProperty Name="Id_Dir" ColumnName="Id_Dir" />
+                <ScalarProperty Name="TipoDir" ColumnName="TipoDir" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TiposTecnicos">
+            <EntityTypeMapping TypeName="DataBaseModel.TiposTecnicos">
+              <MappingFragment StoreEntitySet="TiposTecnicos">
+                <ScalarProperty Name="Id_Tec" ColumnName="Id_Tec" />
+                <ScalarProperty Name="TipoTecnico" ColumnName="TipoTecnico" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Torneios">
+            <EntityTypeMapping TypeName="DataBaseModel.Torneios">
+              <MappingFragment StoreEntitySet="Torneios">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Id_PrimeiroJogo" ColumnName="Id_PrimeiroJogo" />
+                <ScalarProperty Name="Id_SegundoJogo" ColumnName="Id_SegundoJogo" />
+                <ScalarProperty Name="Id_UltimoJogo" ColumnName="Id_UltimoJogo" />
+                <ScalarProperty Name="InicioTorneio" ColumnName="InicioTorneio" />
+                <ScalarProperty Name="Id_ClubeVencedor" ColumnName="Id_ClubeVencedor" />
+                <ScalarProperty Name="id_Pais" ColumnName="id_Pais" />
+                <ScalarProperty Name="Pemio" ColumnName="Pemio" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

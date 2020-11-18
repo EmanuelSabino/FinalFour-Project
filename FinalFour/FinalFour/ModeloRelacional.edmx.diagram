@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e0e225740f0d44c184bd776b60fb03aa" Name="Diagram1" ZoomLevel="112">
+        <EntityTypeShape EntityType="DataBaseModel.ClubesFutebol" Width="1.5" PointX="5.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.Dirigentes" Width="1.5" PointX="1.25" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.Jogadores" Width="1.5" PointX="9" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.Jogos" Width="1.5" PointX="3.875" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.Nacionalidades" Width="1.5" PointX="11.375" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.Paises" Width="1.5" PointX="11.375" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.PosicaoJog" Width="1.5" PointX="11.375" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.sysdiagrams" Width="1.5" PointX="18.375" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.Tecnicos" Width="1.5" PointX="3.375" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.TiposDirigentes" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.TiposTecnicos" Width="1.5" PointX="0.875" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBaseModel.Torneios" Width="1.5" PointX="9" PointY="12.25" IsExpanded="true" />
+        <AssociationConnector Association="DataBaseModel.FK_ClubeDaCasa" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_ClubeDirigente" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_ClubeJog" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_ClubeTec" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_ClubeVencedor" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_ClubeVisitante" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_TipoDirigente" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_JogadorNacionalidade" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_JogadorPosicao" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_primeiroJogo" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_segundoJogo" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_UltimoJogo" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_paisTorneio" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBaseModel.FK_TipoTecnico" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

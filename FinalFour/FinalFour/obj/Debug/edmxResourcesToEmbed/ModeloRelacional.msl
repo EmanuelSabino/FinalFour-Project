@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataBaseModelStoreContainer" CdmEntityContainer="DataBaseEntities">
+    <EntitySetMapping Name="ClubesFutebol">
+      <EntityTypeMapping TypeName="DataBaseModel.ClubesFutebol">
+        <MappingFragment StoreEntitySet="ClubesFutebol">
+          <ScalarProperty Name="Id_Clube" ColumnName="Id_Clube" />
+          <ScalarProperty Name="NomeClube" ColumnName="NomeClube" />
+          <ScalarProperty Name="DataFundacao" ColumnName="DataFundacao" />
+          <ScalarProperty Name="NomeEstadio" ColumnName="NomeEstadio" />
+          <ScalarProperty Name="NumDivisao" ColumnName="NumDivisao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dirigentes">
+      <EntityTypeMapping TypeName="DataBaseModel.Dirigentes">
+        <MappingFragment StoreEntitySet="Dirigentes">
+          <ScalarProperty Name="Nif" ColumnName="Nif" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="InicioContrato" ColumnName="InicioContrato" />
+          <ScalarProperty Name="FimContrato" ColumnName="FimContrato" />
+          <ScalarProperty Name="Ncarteira" ColumnName="Ncarteira" />
+          <ScalarProperty Name="id_tipoDir" ColumnName="id_tipoDir" />
+          <ScalarProperty Name="id_Clube" ColumnName="id_Clube" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jogadores">
+      <EntityTypeMapping TypeName="DataBaseModel.Jogadores">
+        <MappingFragment StoreEntitySet="Jogadores">
+          <ScalarProperty Name="Nif" ColumnName="Nif" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Peso" ColumnName="Peso" />
+          <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="InicioContrato" ColumnName="InicioContrato" />
+          <ScalarProperty Name="FimContrato" ColumnName="FimContrato" />
+          <ScalarProperty Name="NomeCamisola" ColumnName="NomeCamisola" />
+          <ScalarProperty Name="NumeroCamisola" ColumnName="NumeroCamisola" />
+          <ScalarProperty Name="id_Posicao" ColumnName="id_Posicao" />
+          <ScalarProperty Name="id_Nacionalidade" ColumnName="id_Nacionalidade" />
+          <ScalarProperty Name="id_Clube" ColumnName="id_Clube" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Jogos">
+      <EntityTypeMapping TypeName="DataBaseModel.Jogos">
+        <MappingFragment StoreEntitySet="Jogos">
+          <ScalarProperty Name="Id_Jogo" ColumnName="Id_Jogo" />
+          <ScalarProperty Name="Id_ClubeDaCasa" ColumnName="Id_ClubeDaCasa" />
+          <ScalarProperty Name="Id_ClubeVisitente" ColumnName="Id_ClubeVisitente" />
+          <ScalarProperty Name="InicioJogo" ColumnName="InicioJogo" />
+          <ScalarProperty Name="ResultadoClubeDaCasa" ColumnName="ResultadoClubeDaCasa" />
+          <ScalarProperty Name="ResultadoClubeVisitente" ColumnName="ResultadoClubeVisitente" />
+          <ScalarProperty Name="EstadioDoJogo" ColumnName="EstadioDoJogo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Nacionalidades">
+      <EntityTypeMapping TypeName="DataBaseModel.Nacionalidades">
+        <MappingFragment StoreEntitySet="Nacionalidades">
+          <ScalarProperty Name="Id_Nac" ColumnName="Id_Nac" />
+          <ScalarProperty Name="NomeNacionalidade" ColumnName="NomeNacionalidade" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Paises">
+      <EntityTypeMapping TypeName="DataBaseModel.Paises">
+        <MappingFragment StoreEntitySet="Paises">
+          <ScalarProperty Name="Id_Pais" ColumnName="Id_Pais" />
+          <ScalarProperty Name="NomePaises" ColumnName="NomePaises" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PosicaoJog">
+      <EntityTypeMapping TypeName="DataBaseModel.PosicaoJog">
+        <MappingFragment StoreEntitySet="PosicaoJog">
+          <ScalarProperty Name="Id_Pos" ColumnName="Id_Pos" />
+          <ScalarProperty Name="TipoPosicao" ColumnName="TipoPosicao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="DataBaseModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tecnicos">
+      <EntityTypeMapping TypeName="DataBaseModel.Tecnicos">
+        <MappingFragment StoreEntitySet="Tecnicos">
+          <ScalarProperty Name="Nif" ColumnName="Nif" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="DataNascimento" ColumnName="DataNascimento" />
+          <ScalarProperty Name="Contacto" ColumnName="Contacto" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Salario" ColumnName="Salario" />
+          <ScalarProperty Name="InicioContrato" ColumnName="InicioContrato" />
+          <ScalarProperty Name="FimContrato" ColumnName="FimContrato" />
+          <ScalarProperty Name="Ncarteira" ColumnName="Ncarteira" />
+          <ScalarProperty Name="id_tipoTec" ColumnName="id_tipoTec" />
+          <ScalarProperty Name="NumGrauTec" ColumnName="NumGrauTec" />
+          <ScalarProperty Name="id_Clube" ColumnName="id_Clube" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposDirigentes">
+      <EntityTypeMapping TypeName="DataBaseModel.TiposDirigentes">
+        <MappingFragment StoreEntitySet="TiposDirigentes">
+          <ScalarProperty Name="Id_Dir" ColumnName="Id_Dir" />
+          <ScalarProperty Name="TipoDir" ColumnName="TipoDir" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TiposTecnicos">
+      <EntityTypeMapping TypeName="DataBaseModel.TiposTecnicos">
+        <MappingFragment StoreEntitySet="TiposTecnicos">
+          <ScalarProperty Name="Id_Tec" ColumnName="Id_Tec" />
+          <ScalarProperty Name="TipoTecnico" ColumnName="TipoTecnico" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Torneios">
+      <EntityTypeMapping TypeName="DataBaseModel.Torneios">
+        <MappingFragment StoreEntitySet="Torneios">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Id_PrimeiroJogo" ColumnName="Id_PrimeiroJogo" />
+          <ScalarProperty Name="Id_SegundoJogo" ColumnName="Id_SegundoJogo" />
+          <ScalarProperty Name="Id_UltimoJogo" ColumnName="Id_UltimoJogo" />
+          <ScalarProperty Name="InicioTorneio" ColumnName="InicioTorneio" />
+          <ScalarProperty Name="Id_ClubeVencedor" ColumnName="Id_ClubeVencedor" />
+          <ScalarProperty Name="id_Pais" ColumnName="id_Pais" />
+          <ScalarProperty Name="Pemio" ColumnName="Pemio" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,50 @@
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\obj\Debug\FinalFour.csprojAssemblyReference.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\obj\Debug\FinalFour.Form1.resources
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\obj\Debug\FinalFour.Properties.Resources.resources
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.GenerateResource.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.CoreCompileInputs.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\bin\Debug\FinalFour.exe.config
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\bin\Debug\FinalFour.exe
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\bin\Debug\FinalFour.pdb
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\obj\Debug\FinalFour.exe
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\FinalFour\FinalFour\obj\Debug\FinalFour.pdb
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.csprojAssemblyReference.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.Form1.resources
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.Properties.Resources.resources
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.GenerateResource.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.CoreCompileInputs.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.exe
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.pdb
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\bin\Debug\FinalFour.exe.config
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\bin\Debug\FinalFour.exe
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\bin\Debug\FinalFour.pdb
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\bin\Debug\FinalFour.exe.config
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\bin\Debug\FinalFour.exe
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\bin\Debug\FinalFour.pdb
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.csprojAssemblyReference.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.Form1.resources
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.Properties.Resources.resources
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.GenerateResource.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.CoreCompileInputs.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.exe
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\NAO APAGAR\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.pdb
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\bin\Debug\EntityFramework.dll
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\bin\Debug\EntityFramework.xml
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\TrabalhoFinalPoo\Testes\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.CopyComplete
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\bin\Debug\FinalFour.exe.config
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\bin\Debug\FinalFour.exe
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\bin\Debug\FinalFour.pdb
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\bin\Debug\EntityFramework.dll
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\bin\Debug\EntityFramework.xml
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\obj\Debug\FinalFour.csprojAssemblyReference.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\obj\Debug\FinalFour.Form1.resources
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\obj\Debug\FinalFour.Properties.Resources.resources
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.GenerateResource.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.CoreCompileInputs.cache
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\obj\Debug\FinalFour.csproj.CopyComplete
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\obj\Debug\FinalFour.exe
+C:\Users\emanu\OneDrive\Ambiente de Trabalho\FinalFour\FinalFour\obj\Debug\FinalFour.pdb
